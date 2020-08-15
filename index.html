@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <title>Album example · Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <!-- Bootstrap core CSS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-100.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-100.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-100.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-100.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-100.svg#RobotoThinItalic') format('svg');
+            font-weight: 100;
+            font-style: regular;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-300.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-300.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-300.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-300.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-300.svg#RobotoThinItalic') format('svg');
+            font-weight: 300;
+            font-style: regular;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-500.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-500.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-500.svg#RobotoThinItalic') format('svg');
+            font-weight: 500;
+            font-style: regular;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-500italic.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-500italic.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-500italic.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-500italic.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-500italic.svg#RobotoThinItalic') format('svg');
+            font-weight: 500;
+            font-style: italic;
+        }
+
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-700.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-700.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-700.svg#RobotoThinItalic') format('svg');
+            font-weight: 700;
+            font-style: regular;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-900.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-900.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-900.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-900.svg#RobotoThinItalic') format('svg');
+            font-weight: 900;
+            font-style: regular;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-900.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-900.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-900.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-900.svg#RobotoThinItalic') format('svg');
+            font-weight: 900;
+            font-style: regular;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-italic.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-italic.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-italic.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-italic.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-italic.svg#RobotoThinItalic') format('svg');
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./fonts/roboto-v20-latin_cyrillic-regular.eot');
+            src: url('./fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+                url('./fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'),
+                url('./fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'),
+                url('./fonts/roboto-v20-latin_cyrillic-regular.svg#RobotoThinItalic') format('svg');
+            font-weight: 400;
+            font-style: regular;
+        }
+
+        body {
+            font-size: 14px;
+            font-family: "Roboto";
+        }
+
+        p {
+            line-height: 20px;
+        }
+
+        .keyhouse_h2 {
+            text-align: center;
+            font-size: 30px;
+            padding: 25px 0px;
+            width: 100%;
+        }
+
+        .keyhouse_brand {
+            font-size: 30px;
+            font-weight: 600;
+            color: #0189bc;
+            font-style: italic;
+            display: block;
+            line-height: 36px;
+        }
+
+        .keyhouse_list {
+            list-style: none;
+            line-height: 30px;
+        }
+
+        .keyhouse_list li {
+            background: url(./success.png) 0 4px no-repeat;
+            padding-left: 25px;
+        }
+
+
+        .keyhouse_brand_description p {
+            margin: 0px;
+            font-size: 11px;
+            font-style: italic;
+            line-height: 10px;
+        }
+
+        .keyhouse_navbar .nav-item {
+            font-size: 16px;
+        }
+
+        .keyhouse_navbar .navbar-nav {
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        .btn-call_me_baby {
+            white-space: nowrap;
+            background-color: #59ab10;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+
+        .btn-call_me_baby_text {
+            font-style: italic;
+        }
+
+        .keyhouse_navbar .nav-item .nav-link {
+            text-decoration: none;
+            color: #000;
+            font-style: italic;
+        }
+
+        .keyhouse_navbar .active {
+            background: #0189bc;
+            color: #fff
+        }
+
+        .keyhouse_navbar .active .nav-link {
+            color: #fff
+        }
+
+        .timeline-container {
+            display: flex;
+        }
+
+        .timeline-sidebar {
+            width: 305px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .timeline {
+            flex: 1
+        }
+
+
+        .keyhouse_card {
+            box-shadow: inset 0 0 0px 4px rgb(0 0 0);
+        }
+
+
+
+
+
+
+
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .cover {
+            color: rgb(255, 255, 255);
+            position: relative;
+            min-height: 350px;
+            background: url('./bg.png') no-repeat scroll 0px 100% / cover transparent;
+        }
+
+        .whyWe {
+            font-size: 24px;
+        }
+
+        .shadowed {
+            text-shadow: 0 0 2px black, 0 0 2px black, 0 0 3px black, 0 0 2px black;
+        }
+
+        .Step {
+            background: #d2d2d2;
+            padding-left: 88px;
+            border: 0px;
+            width: 100%
+        }
+
+        .Step__number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #f9f8f8;
+            height: 68px;
+            padding-right: 20px;
+            padding-left: 19px;
+            width: 88px;
+            display: flex;
+
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .Step__head {
+            height: 68px;
+            display: flex;
+            align-items: center;
+            color: #e1972a;
+            margin-bottom: 0px;
+        }
+
+        .Step__content {
+            margin-top: 0px;
+        }
+
+        ul.dash {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 1em;
+        }
+
+        ul.dash>li:before {
+            display: inline-block;
+            content: "-";
+            width: 1em;
+            margin-left: -1em;
+        }
+
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            border-left: 1px solid #969696;
+            height: 100%;
+            z-index: 1;
+            transform: translateX(-50%);
+        }
+
+        .timeline-step {
+            width: 130px;
+            z-index: 1;
+            height: 130px;
+            background: #fff;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: inset 1px 1px 10px 2px rgb(0 0 0 / 0.29);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .timeline-text {
+            font-size: 14px;
+        }
+
+        .timeline-last-text {
+            font-size: 11px;
+        }
+
+        .timeline-percent {
+            font-size: 36px;
+            font-weight: 600;
+            color: #ff6633;
+        }
+
+
+        .timeline-step--first {
+            background: #ab020b;
+        }
+
+        .timeline-step--first .timeline-text {
+            font-weight: 600;
+            font-size: 18px
+        }
+
+        .timeline-step--last .timeline-text {
+            font-weight: 400;
+            font-size: 12px
+        }
+
+        .timeline-step--last {
+            background: #00517f
+        }
+
+        .timeline-step-inner {
+            width: 90px;
+            box-shadow: 0 0 0px 2px rgb(0 0 0 / 0.29);
+            height: 90px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .timeline-row {
+            padding: 30px 0px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .timeline-row:first-child {
+            padding-top: 0px;
+        }
+
+        .timeline-row:last-child {
+            padding-bottom: 0px;
+        }
+
+
+        .timeline-description-container {
+            position: absolute;
+            top: 0px;
+            right: -1px;
+            width: 0px;
+            height: 100%;
+        }
+
+        .timeline-description-wrapper {
+            position: relative;
+            height: 100%;
+        }
+
+        .timeline-description-top {
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            height: 50%;
+            width: 180px;
+            font-size: 15px;
+            top: 0px;
+        }
+
+        .timeline-description-top::after {
+            content: "";
+            border-bottom: 1px solid #ccc;
+            display: block;
+            bottom: 0px;
+            position: absolute;
+            width: 180px;
+        }
+
+        @media (min-width: 1200px) {
+            .timeline-row:nth-child(even) .timeline-description-container {
+                left: 1px
+            }
+
+            .timeline-row:nth-child(even) .timeline-description-top {
+                right: 0px;
+            }
+
+        }
+
+
+        @media (max-width: 1200px) {
+            .timeline {
+                padding: 5px;
+            }
+
+            .timeline::before {
+                left: 0;
+                transform: translateX(70px);
+            }
+
+            .timeline-row {
+                justify-content: start;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar keyhouse_navbar navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-brand">
+                    <div><a href="#" class="keyhouse_brand">KeyHouse</a></div>
+                    <div class="keyhouse_brand_description">
+                        <p>Пруды и водоемые под ключ.</p>
+                        <p>Искусственные камни, гроты, фонтаны.</p>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Компания</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Услуги</a>
+                        </li>
+                        <li class="nav-item  active">
+                            <a class="nav-link" href="#">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Блог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-call_me_baby">
+                        <div class="btn-call_me_baby_text">Заказать звонок</div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="jumbotron cover">
+            <div class="container">
+                <h1 class="shadowed font-italic text-center">Почему именно мы?</h1>
+                <div class="d-flex justify-content-center">
+                    <ul class="dash shadowed centred">
+                        <li>Индвидуальный подход к каждому клиенту, поэтому у нас нет не решаемых задач.</li>
+                        <li>Мы предоставляем широкий выбор прудов и водоемов.</li>
+                        <li>Нам не страшны трудности - Мы решаем вопросы любого масштаба.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+
+            <p>Компания "KeyHouse" - решаем уникальные предложения клиентов по возведению искусственных прудов и
+                строительству водоемов.
+                Наши специалисты готовы ответить на все вопросы и предложить оптимальные решения строительства,
+                которые
+                будут соответствовать Вашим ожиданиям.
+                Наш многолетний опыт в проектировании и строительства прудов, водоемов, фонтанов позволяет
+                моментально
+                отреагировать на любые проблемы во время
+                строительства. Мы реализовали строительство больших и малых водных объектов и специализируемся на
+                предоставлении полный диапазон услуг на
+                промышленном, гражданском и сельскохозяйственном рынке. Наши опытные эксперты будут заниматься всеми
+                моментами вашего проекта от начала
+                строительства, до полного завершения работ.</p>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h2 class="keyhouse_h2">Основные направления деятельности</h2>
+            </div>
+
+            <div class="row d-flex justify-content-around">
+                <div class="d-flex flex-column justify-content-between">
+                    <div class="mb-4">
+                        <svg class="bd-placeholder-img card-img-top" width="230" height="170"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg>
+                    </div>
+                    <div>
+                        <svg class="bd-placeholder-img card-img-top" width="230" height="170"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-around align-items-center">
+                    <ul class="keyhouse_list">
+                        <li>Укрепление берегов водоемов по современным технологиям.</li>
+                        <li>Строительство монолитных подпорных стен из железобетона и габионов.</li>
+                        <li>Укрепление склонов, откосов, насыпей и нестабильных грунтов.</li>
+                        <li>Строительство и ремонт пирсов, причалов, понтонов, инсталляция пластиковых модульных
+                            понтонов.</li>
+                        <li>Строительство набережных, переходов и мостиков.</li>
+                        <li>Очистка водоемов от растительности и ила.</li>
+                        <li>Углубление дна.</li>
+                        <li>Благоустройство территорий.</li>
+                        <li>Продажа конструкций и материалов для укрепления берега и ландшафтного дизайна.</li>
+                        <li>Создание декоративных водоемов и бассейнов для плавания.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <h2 class="keyhouse_h2">Как мы работаем?</h2>
+            </div>
+
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex">
+                    <div class="card mb-4 Step">
+                        <div class="Step__number">
+                            01
+                        </div>
+                        <h5 class="Step__head">Обращение заказчика</h5>
+
+                        <p class="Step__content">Получение заявки, обработка
+                            информации, консультирование и
+                            предварительная оценка</p>
+                    </div>
+
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="card mb-4 Step">
+                        <div class="Step__number">
+                            02
+                        </div>
+                        <h5 class="Step__head">Выезд на объект</h5>
+
+                        <p class="Step__content">Осмотр и проведение замеров на
+                            месте, выбор оптимального метода
+                            реализации</p>
+                    </div>
+
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="card mb-4 Step">
+                        <div class="Step__number">
+                            03
+                        </div>
+                        <h5 class="Step__head">Составление сметы</h5>
+
+                        <p class="Step__content">Расчет стоимости материалов и работ.
+                            Согласование итоговой сметы с
+                            заказчиком</p>
+                    </div>
+
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="card mb-4 Step">
+                        <div class="Step__number">
+                            04
+                        </div>
+                        <h5 class="Step__head">Заключение договора</h5>
+
+                        <p class="Step__content">Обговариваем все условия работы
+                            на взаимовыгодных началах</p>
+                    </div>
+
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="card mb-4 Step">
+                        <div class="Step__number">
+                            05
+                        </div>
+                        <h5 class="Step__head">Строительные работы</h5>
+
+                        <p class="Step__content">Сроки исполнения – от двух недель до
+                            трех месяцев, в зависимости от
+                            сложности и объема работ</p>
+                    </div>
+
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="card mb-4 Step">
+                        <div class="Step__number">
+                            06
+                        </div>
+                        <h5 class="Step__head">Сдача объекта заказчику</h5>
+
+                        <p class="Step__content">Подписание акта выполненных работ</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <h2 class="keyhouse_h2">Предложение о сотрудничестве для подрядных организаций</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <p>Компания "KeyHouse" заинтересована в повышении объемов выполняемых подрядов. Мы с интересом
+                    анализируем предложения от экспертов, способных
+                    организовать участие компании в строительных подрядах. При этом, за приведение клиента мы
+                    выплачиваем вознаграждение, которое оценивается
+                    исходя из объемов работ и полученного дохода. Выйти с нами на связь по данному вопросу можно любым
+                    из способов, указанных в разделе "Контакты"</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h2 class="keyhouse_h2">Этапы строительства</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row timeline-container">
+                <div class="timeline-sidebar timeline-sidebar--left">
+                    <div class="timeline-sidebar_image"><svg class="bd-placeholder-img card-img-top" width="305"
+                            height="460" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                            focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg></div>
+                    <div class="timeline-sidebar_image"> <svg class="bd-placeholder-img card-img-top" width="305"
+                            height="460" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                            focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg></div>
+                </div>
+                <div class="timeline">
+                    <div class='timeline-row'>
+                        <div class="timeline-step timeline-step--first">
+                            <div class="timeline-step-inner timeline-text">
+                                Начало работ
+                            </div>
+                        </div>
+                    </div>
+                    <div class='timeline-row'>
+                        <div class="timeline-step">
+                            <div class="timeline-step-inner timeline-percent">
+                                5%
+                            </div>
+                            <div class="timeline-description-container">
+                                <div class="timeline-description-wrapper">
+                                    <div class="timeline-description-top">
+                                        Подготовка территории к проведению работ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='timeline-row'>
+                        <div class="timeline-step">
+                            <div class="timeline-step-inner timeline-percent">
+                                10%
+                            </div>
+                            <div class="timeline-description-container">
+                                <div class="timeline-description-wrapper">
+                                    <div class="timeline-description-top">
+                                        Закупка материалов для строительства
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='timeline-row'>
+                        <div class="timeline-step">
+                            <div class="timeline-step-inner timeline-percent">
+                                80%
+                            </div>
+                            <div class="timeline-description-container">
+                                <div class="timeline-description-wrapper">
+                                    <div class="timeline-description-top">
+                                        Проведение строительных работ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='timeline-row'>
+                        <div class="timeline-step">
+                            <div class="timeline-step-inner timeline-percent">
+                                80%
+                            </div>
+                            <div class="timeline-description-container">
+                                <div class="timeline-description-wrapper">
+                                    <div class="timeline-description-top">
+                                        Благоустройство территории после строительства
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='timeline-row'>
+                        <div class="timeline-step timeline-step--last">
+                            <div class="timeline-step-inner timeline-text">
+                                Прием объекта заказчиком
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-sidebar timeline-sidebar--right">
+                    <div class="timeline-sidebar_image"> <svg class="bd-placeholder-img card-img-top" width="305"
+                            height="460" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                            focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg></div>
+                    <div class="timeline-sidebar_image"> <svg class="bd-placeholder-img card-img-top" width="305"
+                            height="460" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                            focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <h2 class="keyhouse_h2">Примеры строительства объектов</h2>
+            </div>
+        </div>
+
+
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 keyhouse_card">
+                            <svg class="bd-placeholder-img card-img-top" width="360" height="200"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" />
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    Thumbnail
+                                </text>
+                            </svg>
+
+                            <div class="card-body">
+                                <h3 class="card-text text-center">
+                                    Строительство пирсов
+                                </h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 keyhouse_card">
+                            <svg class="bd-placeholder-img card-img-top" width="360" height="200"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" />
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    Thumbnail
+                                </text>
+                            </svg>
+
+                            <div class="card-body">
+                                <h3 class="card-text text-center">
+                                    Строительство пирсов
+                                </h3>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 keyhouse_card">
+                            <svg class="bd-placeholder-img card-img-top" width="360" height="200"
+                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c" />
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                    Thumbnail
+                                </text>
+                            </svg>
+
+                            <div class="card-body">
+                                <h3 class="card-text text-center">
+                                    Строительство пирсов
+                                </h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+
+        </div>
+    </footer>
+</body>
+
+</html>
