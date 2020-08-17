@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="" />
-    <title>Album example · Bootstrap</title>
+    <title>KeyHouse</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css" />
 
     <!-- Bootstrap core CSS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -22,432 +23,7 @@
         crossorigin="anonymous"></script>
 
     <style>
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-100.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-100.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-100.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-100.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-100.svg#RobotoThinItalic') format('svg');
-            font-weight: 100;
-            font-style: regular;
-        }
 
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-300.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-300.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-300.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-300.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-300.svg#RobotoThinItalic') format('svg');
-            font-weight: 300;
-            font-style: regular;
-        }
-
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-500.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-500.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-500.svg#RobotoThinItalic') format('svg');
-            font-weight: 500;
-            font-style: regular;
-        }
-
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-500italic.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-500italic.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-500italic.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-500italic.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-500italic.svg#RobotoThinItalic') format('svg');
-            font-weight: 500;
-            font-style: italic;
-        }
-
-
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-700.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-700.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-700.svg#RobotoThinItalic') format('svg');
-            font-weight: 700;
-            font-style: regular;
-        }
-
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-900.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-900.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-900.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-900.svg#RobotoThinItalic') format('svg');
-            font-weight: 900;
-            font-style: regular;
-        }
-
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-900.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-900.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-900.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-900.svg#RobotoThinItalic') format('svg');
-            font-weight: 900;
-            font-style: regular;
-        }
-
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-italic.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-italic.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-italic.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-italic.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-italic.svg#RobotoThinItalic') format('svg');
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Roboto';
-            src: url('./fonts/roboto-v20-latin_cyrillic-regular.eot');
-            src: url('./fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
-                url('./fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'),
-                url('./fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'),
-                url('./fonts/roboto-v20-latin_cyrillic-regular.svg#RobotoThinItalic') format('svg');
-            font-weight: 400;
-            font-style: regular;
-        }
-
-        body {
-            font-size: 14px;
-            font-family: "Roboto";
-        }
-
-        p {
-            line-height: 20px;
-        }
-
-        .keyhouse_h2 {
-            text-align: center;
-            font-size: 30px;
-            padding: 25px 0px;
-            width: 100%;
-        }
-
-        .keyhouse_brand {
-            font-size: 30px;
-            font-weight: 600;
-            color: #0189bc;
-            font-style: italic;
-            display: block;
-            line-height: 36px;
-        }
-
-        .keyhouse_list {
-            list-style: none;
-            line-height: 30px;
-        }
-
-        .keyhouse_list li {
-            background: url(./success.png) 0 4px no-repeat;
-            padding-left: 25px;
-        }
-
-
-        .keyhouse_brand_description p {
-            margin: 0px;
-            font-size: 11px;
-            font-style: italic;
-            line-height: 10px;
-        }
-
-        .keyhouse_navbar .nav-item {
-            font-size: 16px;
-        }
-
-        .keyhouse_navbar .navbar-nav {
-            justify-content: space-evenly;
-            width: 100%;
-        }
-
-        .btn-call_me_baby {
-            white-space: nowrap;
-            background-color: #59ab10;
-            color: #fff;
-            font-size: 16px;
-            border-radius: 10px;
-        }
-
-        .btn-call_me_baby_text {
-            font-style: italic;
-        }
-
-        .keyhouse_navbar .nav-item .nav-link {
-            text-decoration: none;
-            color: #000;
-            font-style: italic;
-        }
-
-        .keyhouse_navbar .active {
-            background: #0189bc;
-            color: #fff
-        }
-
-        .keyhouse_navbar .active .nav-link {
-            color: #fff
-        }
-
-        .timeline-container {
-            display: flex;
-        }
-
-        .timeline-sidebar {
-            width: 305px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .timeline {
-            flex: 1
-        }
-
-
-        .keyhouse_card {
-            box-shadow: inset 0 0 0px 4px rgb(0 0 0);
-        }
-
-
-
-
-
-
-
-
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        .cover {
-            color: rgb(255, 255, 255);
-            position: relative;
-            min-height: 350px;
-            background: url('./bg.png') no-repeat scroll 0px 100% / cover transparent;
-        }
-
-        .whyWe {
-            font-size: 24px;
-        }
-
-        .shadowed {
-            text-shadow: 0 0 2px black, 0 0 2px black, 0 0 3px black, 0 0 2px black;
-        }
-
-        .Step {
-            background: #d2d2d2;
-            padding-left: 88px;
-            border: 0px;
-            width: 100%
-        }
-
-        .Step__number {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #f9f8f8;
-            height: 68px;
-            padding-right: 20px;
-            padding-left: 19px;
-            width: 88px;
-            display: flex;
-
-            font-size: 40px;
-            font-weight: 600;
-        }
-
-        .Step__head {
-            height: 68px;
-            display: flex;
-            align-items: center;
-            color: #e1972a;
-            margin-bottom: 0px;
-        }
-
-        .Step__content {
-            margin-top: 0px;
-        }
-
-        ul.dash {
-            list-style: none;
-            margin-left: 0;
-            padding-left: 1em;
-        }
-
-        ul.dash>li:before {
-            display: inline-block;
-            content: "-";
-            width: 1em;
-            margin-left: -1em;
-        }
-
-
-        .timeline {
-            position: relative;
-        }
-
-        .timeline::before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 0;
-            border-left: 1px solid #969696;
-            height: 100%;
-            z-index: 1;
-            transform: translateX(-50%);
-        }
-
-        .timeline-step {
-            width: 130px;
-            z-index: 1;
-            height: 130px;
-            background: #fff;
-            border-radius: 50%;
-            position: relative;
-            box-shadow: inset 1px 1px 10px 2px rgb(0 0 0 / 0.29);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .timeline-text {
-            font-size: 14px;
-        }
-
-        .timeline-last-text {
-            font-size: 11px;
-        }
-
-        .timeline-percent {
-            font-size: 36px;
-            font-weight: 600;
-            color: #ff6633;
-        }
-
-
-        .timeline-step--first {
-            background: #ab020b;
-        }
-
-        .timeline-step--first .timeline-text {
-            font-weight: 600;
-            font-size: 18px
-        }
-
-        .timeline-step--last .timeline-text {
-            font-weight: 400;
-            font-size: 12px
-        }
-
-        .timeline-step--last {
-            background: #00517f
-        }
-
-        .timeline-step-inner {
-            width: 90px;
-            box-shadow: 0 0 0px 2px rgb(0 0 0 / 0.29);
-            height: 90px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .timeline-row {
-            padding: 30px 0px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .timeline-row:first-child {
-            padding-top: 0px;
-        }
-
-        .timeline-row:last-child {
-            padding-bottom: 0px;
-        }
-
-
-        .timeline-description-container {
-            position: absolute;
-            top: 0px;
-            right: -1px;
-            width: 0px;
-            height: 100%;
-        }
-
-        .timeline-description-wrapper {
-            position: relative;
-            height: 100%;
-        }
-
-        .timeline-description-top {
-            position: absolute;
-            display: flex;
-            align-items: flex-end;
-            height: 50%;
-            width: 180px;
-            font-size: 15px;
-            top: 0px;
-        }
-
-        .timeline-description-top::after {
-            content: "";
-            border-bottom: 1px solid #ccc;
-            display: block;
-            bottom: 0px;
-            position: absolute;
-            width: 180px;
-        }
-
-        @media (min-width: 1200px) {
-            .timeline-row:nth-child(even) .timeline-description-container {
-                left: 1px
-            }
-
-            .timeline-row:nth-child(even) .timeline-description-top {
-                right: 0px;
-            }
-
-        }
-
-
-        @media (max-width: 1200px) {
-            .timeline {
-                padding: 5px;
-            }
-
-            .timeline::before {
-                left: 0;
-                transform: translateX(70px);
-            }
-
-            .timeline-row {
-                justify-content: start;
-            }
-        }
     </style>
     <!-- Custom styles for this template -->
 </head>
@@ -496,7 +72,7 @@
     <main role="main">
         <section class="jumbotron cover">
             <div class="container">
-                <h1 class="shadowed font-italic text-center">Почему именно мы?</h1>
+                <h2 class="shadowed font-italic text-center">Почему именно мы?</h2>
                 <div class="d-flex justify-content-center">
                     <ul class="dash shadowed centred">
                         <li>Индвидуальный подход к каждому клиенту, поэтому у нас нет не решаемых задач.</li>
@@ -706,16 +282,32 @@
                 </div>
                 <div class="timeline">
                     <div class='timeline-row'>
-                        <div class="timeline-step timeline-step--first">
-                            <div class="timeline-step-inner timeline-text">
-                                Начало работ
+                        <div class="timeline-step timeline-step--last">
+                            <div class="timeline-step-inner timeline-percent">
+                                <div class="set-size charts-container">
+                                    <div class="pie-wrapper progress-start">
+                                        <span class="label label-text">Начало работы</span>
+                                        <div class="pie">
+                                            <div class="left-side half-circle half-circle--variant2"></div>
+                                            <div class="right-side half-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class='timeline-row'>
                         <div class="timeline-step">
                             <div class="timeline-step-inner timeline-percent">
-                                5%
+                                <div class="set-size charts-container">
+                                    <div class="pie-wrapper progress-5">
+                                        <span class="label">5%</span>
+                                        <div class="pie">
+                                            <div class="left-side half-circle"></div>
+                                            <div class="right-side half-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="timeline-description-container">
                                 <div class="timeline-description-wrapper">
@@ -729,7 +321,15 @@
                     <div class='timeline-row'>
                         <div class="timeline-step">
                             <div class="timeline-step-inner timeline-percent">
-                                10%
+                                <div class="set-size charts-container">
+                                    <div class="pie-wrapper progress-10">
+                                        <span class="label">10%</span>
+                                        <div class="pie">
+                                            <div class="left-side half-circle"></div>
+                                            <div class="right-side half-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="timeline-description-container">
                                 <div class="timeline-description-wrapper">
@@ -743,7 +343,15 @@
                     <div class='timeline-row'>
                         <div class="timeline-step">
                             <div class="timeline-step-inner timeline-percent">
-                                80%
+                                <div class="set-size charts-container">
+                                    <div class="pie-wrapper progress-80">
+                                        <span class="label">80%</span>
+                                        <div class="pie">
+                                            <div class="left-side half-circle"></div>
+                                            <div class="right-side half-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="timeline-description-container">
                                 <div class="timeline-description-wrapper">
@@ -757,7 +365,15 @@
                     <div class='timeline-row'>
                         <div class="timeline-step">
                             <div class="timeline-step-inner timeline-percent">
-                                80%
+                                <div class="set-size charts-container">
+                                    <div class="pie-wrapper progress-5">
+                                        <span class="label">5%</span>
+                                        <div class="pie">
+                                            <div class="left-side half-circle half-circle--variant2"></div>
+                                            <div class="right-side half-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="timeline-description-container">
                                 <div class="timeline-description-wrapper">
@@ -770,8 +386,16 @@
                     </div>
                     <div class='timeline-row'>
                         <div class="timeline-step timeline-step--last">
-                            <div class="timeline-step-inner timeline-text">
-                                Прием объекта заказчиком
+                            <div class="timeline-step-inner timeline-percent">
+                                <div class="set-size charts-container">
+                                    <div class="pie-wrapper progress-finish">
+                                        <span class="label label-text">Прием объекта заказчиком</span>
+                                        <div class="pie">
+                                            <div class="left-side half-circle half-circle--variant2"></div>
+                                            <div class="right-side half-circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -807,71 +431,69 @@
 
 
 
-        <div class="album py-5 bg-light">
-            <div class="container">
-                <div class="row">
+        <div class="container">
+            <div class="row">
 
 
-                    <div class="col-md-4">
-                        <div class="card mb-4 keyhouse_card">
-                            <svg class="bd-placeholder-img card-img-top" width="360" height="200"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" />
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                                    Thumbnail
-                                </text>
-                            </svg>
+                <div class="col-md-4">
+                    <div class="card mb-4 keyhouse_card">
+                        <svg class="bd-placeholder-img card-img-top" width="360" height="200"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg>
 
-                            <div class="card-body">
-                                <h3 class="card-text text-center">
-                                    Строительство пирсов
-                                </h3>
-                            </div>
-
+                        <div class="card-body">
+                            <h3 class="card-text text-center">
+                                Строительство пирсов
+                            </h3>
                         </div>
+
                     </div>
+                </div>
 
-                    <div class="col-md-4">
-                        <div class="card mb-4 keyhouse_card">
-                            <svg class="bd-placeholder-img card-img-top" width="360" height="200"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" />
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                                    Thumbnail
-                                </text>
-                            </svg>
+                <div class="col-md-4">
+                    <div class="card mb-4 keyhouse_card">
+                        <svg class="bd-placeholder-img card-img-top" width="360" height="200"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg>
 
-                            <div class="card-body">
-                                <h3 class="card-text text-center">
-                                    Строительство пирсов
-                                </h3>
-                            </div>
-
+                        <div class="card-body">
+                            <h3 class="card-text text-center">
+                                Строительство пирсов
+                            </h3>
                         </div>
+
                     </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 keyhouse_card">
-                            <svg class="bd-placeholder-img card-img-top" width="360" height="200"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" />
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                                    Thumbnail
-                                </text>
-                            </svg>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 keyhouse_card">
+                        <svg class="bd-placeholder-img card-img-top" width="360" height="200"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                                Thumbnail
+                            </text>
+                        </svg>
 
-                            <div class="card-body">
-                                <h3 class="card-text text-center">
-                                    Строительство пирсов
-                                </h3>
-                            </div>
-
+                        <div class="card-body">
+                            <h3 class="card-text text-center">
+                                Строительство пирсов
+                            </h3>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -879,7 +501,7 @@
 
     <footer class="text-muted">
         <div class="container">
-
+            Футер
         </div>
     </footer>
 </body>
